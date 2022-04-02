@@ -1,0 +1,113 @@
+a{
+    text-decoration:unset;
+    color:white;
+}
+a:hover{
+    color:red;
+}
+button{
+    font-size: xx-large;
+    background-color:green;
+border-radius: 12px;
+color: white;
+margin-left: 90%;
+
+ }
+ button:hover{
+color: darkslateblue;
+background-color: yellow;
+ }
+ .enregistrer{
+     width: 29%;
+     height: auto;
+     margin:2;
+
+     
+ }
+ i{
+    color: white;font-size:20px;
+ }
+ i:hover{
+     color:black;
+ }
+ table{
+     border-collapse:collapse;
+     background-color:crimson ;
+ }
+ table:hover{
+     background-color:aqua;
+ }
+ body{
+     background-image: url(./log/1.jpg);
+     background-repeat:no-repeat;
+     background-size:cover;
+ }
+ .tab{
+     padding:40px;
+float:right;
+     margin-top:-40%;
+     width:50%;
+     background-color:blue;
+     border-radius:20px;
+     color:aqua;
+     position: relative;
+     animation: b 10s infinite;
+ }
+ td{
+                 font-size:20px;
+
+ }
+ .tab:hover{
+     background-color:gold;
+color:black;
+ }
+ #a{
+     color:white;
+     background-color:blue;
+width: 200px;
+border-radius:20px;
+padding:12px;
+font-size:20px;
+height:auto;
+margin-left:50%;
+ }
+ #cc{
+     color:white;
+     background-color:white;
+width: 200px;
+border-radius:20px;
+padding:12px;
+margin-top:-30px;
+font-size:20px;
+height:auto;
+animation: cc 10s infinite linear; 
+position:relative;
+ }
+ @keyframes cc{
+0%{right:7%;}
+100%{right:-92%;}
+ }
+ #ccc{
+width: 200px;
+margin-bottom:-11.5px;
+border-radius:20px;
+padding:12px;
+font-size:20px;
+height:auto;
+animation: ccc 15s infinite linear; 
+position:relative;
+ }
+ @keyframes ccc{
+0%{right:5%;}
+20%{top: 5px;}
+50%{top: 5px;}
+80%{bottom: 5px;}
+100%{right:-90%;}
+ }
+ .mov{
+     background-color:black;
+     padding: 10px;
+ }
+ *{
+     margin:0;padding:0;
+ }

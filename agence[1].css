@@ -1,0 +1,185 @@
+body{
+    background-size:100% 100%;
+    background-repeat:no-repeat;
+background-image: url(log/agence.png);
+}
+.op>form>textarea{
+   width: 200px;
+}
+h1{
+   color: blue;
+   font-weight: 50px    ;
+   text-align: center;
+   font-family: 'Courier New', Courier, monospace;
+   font-size : 40px;
+}
+        .chauffeur:hover{
+         background-image: url(log/chauf11.png);
+         background-size: 100% 100%;
+                 }
+                 .message:hover{
+                    
+         background-image: url(log/message1.png);
+         background-size: 100% 100%;
+         
+                 }
+                 .tarder:hover{
+         
+                  background-image: url(log/ticet1.jpg);
+                  background-size: 100% 100%;
+                 }
+                 .voyageur:hover{
+         
+                  background-image: url(log/vog11.png);
+                  background-size: 100% 100%;
+                 }
+        .chauffeur{
+background-image: url(log/chauf1.png);
+background-size: 100% 100%;
+padding:100px 100px;width: 50%;height: 50%;
+        }
+        i{
+           color:blue;
+           font-size:30px;
+        }
+        .message{
+padding:100px 100px;width: 50%;height: 50%;
+           
+background-image: url(log/message.png);
+background-size: 100% 100%;
+
+        }
+        .tarder{
+         padding:100px 100px;width: 50%;height: 50%;
+
+         background-image: url(log/ticet.jpg);
+         background-size: 100% 100%;
+        }
+        .voyageur{
+         padding:100px 100px;width: 50%;height: 50%;
+
+         background-image: url(log/vog1.png);
+         background-size: 100% 100%;
+        }
+p{
+color: red;
+   font-weight: 1000px    ;
+   text-align: left;
+   font-family:'Times New Roman', Times, serif ;
+   font-size : 50px;
+}
+a{
+    color:whitesmoke;
+    outline:0 ;
+    font-size: 25px;
+    font-family: serif;
+    text-anchor: middle;
+    text-decoration-line: unset;
+}
+
+a:hover{
+   color:white;
+   outline:0 ;
+
+}
+a:visited{
+   color:red;
+   outline:0 ;
+   text-decoration:unset;
+
+}
+a:active{
+outline:0 ;
+
+}
+
+
+
+header {
+height: 60px;
+top: 0.1pt;
+margin-left:0;
+background-color: yellow;
+position:fixed;
+width: 100%;
+}
+.h{
+color: brown;
+text-align: center;
+}
+footer{
+display: block;
+background-color: brown;
+font-size:52px;
+text-align: center;
+color: #777;
+}
+img{
+height: 20%;
+margin:10px auto ;
+
+}
+.text{
+   border: blue;
+width:50%;
+height: 50px;
+}
+.op{
+background-color:orange;
+margin:auto;
+width:30%;
+height: auto;
+color:white;
+border-radius :20px;
+margin-top:22px;
+}
+.op>form{
+   margin-left:100px;   
+}
+.l{
+margin-right:72%;
+font-style:italic;
+color:white;
+background-color:brown;
+border-radius:12px;
+font-size:25px;
+}
+.logout{
+  position: relative;
+  animation: a 10s infinite; 
+}
+@keyframes a{
+   0%{left:180px;}
+   100%{left: -160px;}
+}
+.left{
+background-color:green;
+float:right;
+margin-top:-43.36%;
+margin-left:70%;
+height:auto;
+color:gold;
+padding:50px;
+position:fixed;
+
+ }
+ .image{
+    height: auto;
+ }
+ .left>table{
+    border-collapse:collapse;
+    background-color:brown;
+
+ }
+ .left>table:hover{
+    border-collapse:collapse;
+    background-color:gold;
+
+ }
+.center{
+    background-color:wheat;
+    border-collapse: collapse;
+}
+.center:hover{
+    background-color:turquoise;
+}
