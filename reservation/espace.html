@@ -1,0 +1,103 @@
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+///
+
+<?php
+include "../auth.php";
+
+include "connection.php";
+@$page=$_GET['page'];
+if($page==0 || $page==1){
+    $next=0;
+}
+else {
+    $next=($page*100)-100;
+}
+$sql="SELECT * FROM clienttarder WHERE CURRENT_DATE()=temp ORDER BY (id)DESC limit $next,100";
+$res=mysqli_query($con,$sql);
+$sql5="SELECT * FROM clienttarder";
+$res5=mysqli_query($con,$sql5);
+$n=mysqli_num_rows($res5);
+
+?>
+<html>
+    <head>  <link href="../css/f.css" rel="stylesheet"><title>enrefisrement</title>
+   </head>
+    <body>
+ <button style="background-color:red;font-size:20px;"> <a href="index.php"><img src="../log/back.gif">عودة</a></button>
+        
+<table border=1 width=90%>
+        <tr>
+            <th></th>
+            <th> numero chaise رقم المقعد</th>
+            <th> nom الإسم</th>
+            <th> prenom اللقب</th>
+            <th> telephone الهاتف</th>
+            <th>direction الوجهة</th>
+            <th>date الوقت</th>
+            <th>envoyer</th>
+            <th colspan=2> action تعديل</th>
+
+        </tr>
+        <tr>
+    <?php
+    while($ligne=mysqli_fetch_assoc($res)) {?>
+       <form method="post"><td><input type="checkbox" onclick="for(c in document.getElementsByName('chkl')) getElementsByName('chkl').item(c).checked=this.checked"></td>
+       <td> <input type="checkbox" name="chkl0" required value="<?php  echo $ligne['numero'];?>"> <?php  echo $ligne['numero'];?></td>  
+     <td><input type="checkbox" required name="chkl1" value="<?php  echo $ligne['nom'];?>"><?php  echo $ligne['nom'];?></td>  
+            <td><input type="checkbox" required name="chkl2" value="<?php  echo $ligne['prenom'];?>"><?php  echo $ligne['prenom'];?></td> 
+            <td><input type="checkbox" required name="chkl3" value="<?php  echo $ligne['telephone'];?>"><?php  echo $ligne['telephone'];?></td>  
+            <td><input type="checkbox" required name="chkl4" value="<?php  echo $ligne['direction'];?>"><?php  echo $ligne['direction'];?></td>  
+            <td><input type="checkbox" required name="chkl5" value="<?php  echo $ligne['temp'];?>"><?php  echo $ligne['temp'];?></td>  
+        <td><input type="submit" value="vrai" name="envoiyer"></td></form>    <td><button onMouseUp="ok();"><a href="suprimer.php?id=<?php  echo $ligne['id'];?>">حذف</a></button></td>  
+    <td><button><a href="edit.php?id=<?php echo $ligne['id'];?>">تغير</a></button></td>
+           </tr>
+           <?php };?>
+</tr>
+    </table><footer></footer>
+</form>
+<script>
+
+            function vrai(source){
+                var checkall=document.getElementsByName('input[type="checkbox"]');
+        for(var i=0;i<checkall.length;i++){
+            if(checkall[i].checked!=source) checkall[i].checked=source.checked;
+        }
+            }
+    </script>
+    </body>
+</html><?php
+echo "<div class='next'>";
+echo "<br><br>";
+$sql1="SELECT * from client ";
+$res1=mysqli_query($con,$sql1);
+$num=mysqli_num_rows($res1);
+$a=$num/100;
+$a=ceil($a);
+echo "<img style='background-color:white; ' src='../log/left.png'>";
+
+for($i=1;$i<=$a;$i++){
+    ?><button><a href="afficher.php?page=<?php echo $i;?>"><?php  echo $i;?></a></button><?php
+}
+echo "<img style='background-color:white; ' src='../log/right.png'>";
+echo "</div>"
+?>
+<?php
+include "connection.php";
+$chek1=$_POST['chkl1'];
+$chek2=$_POST['chkl2'];
+$chek3=$_POST['chkl3'];
+$chek4=$_POST['chkl4'];
+$chek5=$_POST['chkl5'];
+$chek0=$_POST['chkl0'];
+
+if(isset($_POST['envoiyer'])){
+   $sql="INSERT INTO `client`(nom,prenom,numero,telephone,direction,date) VALUES ('$chek1','$chek2',$chek0,$chek3,'$chek4','$chek5')";
+ $res=mysqli_query($con,$sql);
+ if($res) echo "termnier";
+ else echo "erro";
+
+}
+
+?>
+<?php include "footer.html" ;?>
+

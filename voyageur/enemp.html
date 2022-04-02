@@ -1,0 +1,87 @@
+<html>
+<head><style>
+      body{
+            background-size:100% 100%;
+            background-repeat:no-repeat;
+background-image: url(log/enregistrer.png);
+            background-color: chartreuse;
+        }
+    input[type=text]{
+        font-family: fantasy;
+        color:rgb(111, 0, 255);
+        border-radius: 20px ;
+        width: 200px;
+        height: 30px;
+
+    }
+    
+    input[type=number]{
+        font-family: fantasy;
+        color:rgb(157, 255, 0);
+        border-radius:  20px ;
+        width: 200px;
+        height: 30px;
+    }
+   
+    
+    
+    input[type=submit], [type=reset]{
+        font-family: fantasy;
+        color:rgb(255, 166, 0);
+        border-radius: 20px ;
+        width: 100px;
+        height: 30px;
+    }
+    input[type=submit], [type=reset]:hover{
+        font-family: fantasy;
+        color:rgb(68, 0, 255);
+        border-radius: 20px ;
+    }
+    input[type=submit], [type=reset]:visited{
+        font-family: fantasy;
+        color:darkorange;
+        border-radius: 20px ;
+    }
+    .c{
+        margin :auto;
+text-align: center;
+color:darkblue;
+background-color: darkkhaki;
+height :135%;
+width: 30%;
+border-radius:30px;
+    }
+    a{
+        text-decoration:unset;
+        text-align: center;
+    }
+    
+    label{
+        font-size: 20px;
+    }    button{
+            background-color: darkmagenta;
+            border-radius:16px;
+            width:80px;
+        }
+    
+</style><title>emploi du temp</title></head>
+<body>
+    
+    <a href="agence.php"><button><img src="log/back.gif">RETOUR</button></a>
+<div class="c">
+    <form action="insemp.php" method="POST">
+        <label>nom</label><br><input  type="text" name="nom" required placeholder="entrerlenom du prof"><br><br>
+        <label>prenom</label><br><input type="text" name="prenom" required placeholder="entrerle prenom du prof"><br><br>
+        <label>numero</label><br><input type="text" name="numero" required placeholder="entrer numero du prof"><br><br>
+       <label> lundi</label><br><input type="text" name="lundi" placeholder="ecrir classe et le matiere" required ><br><label>le temp</label><br><input type="time" required name="lut"><br><br>
+       <label> mardi</label><br><input type="text" name="mardi" placeholder="ecrir classe et le matiere" required ><br><label>le temp</label><br><input type="time"  required name="mat"><br><br>
+       <label> mercredi</label><br><input type="text" placeholder="ecrir classe et le matiere" name="mercredi" required ><br><label>le temp</label><br><input type="time"  required name="met"><br><br>
+       <label> jeudi</label><br><input type="text" placeholder="ecrir classe et le matiere" name="jeudi" required ><br><label>le temp</label><br><input type="time"  required name="jet"><br><br>
+       <label> vandredi</label><br><input type="text" placeholder="ecrir classe et le matiere" name="vandredi" required ><br><label>le temp</label><br><input type="time" required  name="vet"><br><br><br>
+<label><input type="submit" value="envoiyer" > <input type="reset" value="annuler">
+    </label><br></form></div>
+    <br>
+
+</body>
+
+</html>
