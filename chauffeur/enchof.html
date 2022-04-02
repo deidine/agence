@@ -1,0 +1,38 @@
+<html>
+    <head><meta charset="utf-8">
+        <style>
+          
+            nav{
+                background-color: orange;
+                float: left;
+                margin-top:-24%;
+                padding: 40px;
+                border-radius:20px;
+            }
+            nav:hover{
+                background-color:gold;
+            }
+            b{
+                color:green;
+                font-size:20px;
+            }
+                  </style>
+        <link href="../css/0.css" rel="stylesheet">
+        <title>enregistrer le chauffeur</title></head>
+    <body>
+       <div class="c" ><form action="insCh.php" method="POST">
+  <label>numero</label><br><input type="text" name="numero" required placeholder="entrer numero du prof"><br><br>
+<label>nom</label><br><input type="text" name="nom" required><br>      
+
+<label>prenom</label><br><input type="text" name="prenom" required><br>
+<label>telelphone</label><br><input type="number" name="tel" required><br>
+<lable>salaire</label><br><input type="number" name="salaire" required ><br><br>
+
+<input type="submit" value="enregistrer" ><input type="reset" value="annuler">
+        </form></div><br>
+        <a href="index.php"><button><img src="../log/back.gif">RETOUR</button></a>
+   <nav class="left">
+            <b>enregistrer les information du chauffeur ici <br>سجل معلومات السائق هنا بعد الأنتهاء أضغط على <br>enregistrer
+            </B>
+                </nav> </body>
+</html>
