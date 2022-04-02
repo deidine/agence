@@ -1,0 +1,34 @@
+body{
+    background-image:url(../log/2.jpg);
+     background-size:100% 100%;
+     background-repeat:no-repeat;
+     background-color: chartreuse;
+ }
+     
+ table{
+     height: 50px;
+     font-size:20px;
+     border:1px solid ;
+     border-collapse:collapse;
+     background-color:gold;
+
+ }
+ th,td{
+     border:1px solid;
+     
+ }
+a{
+    color : red;
+    text-decoration:unset;
+}
+a{
+    color : blue;
+    text-decoration:unset;
+ }
+ 
+ a:hover{
+    color:blue;
+ }
+ a:visited{
+    color:chocolate;
+ }
