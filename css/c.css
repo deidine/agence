@@ -1,0 +1,29 @@
+table{
+    height: 50px;
+    font-size:20px;
+    border:1px solid ;
+    border-collapse:collapse;
+
+
+}
+th,td{
+    border:1px solid;
+    
+}
+a{
+   color : gold;
+   text-decoration:unset;
+}
+a:hover{
+   color:white;
+}
+a:visited{
+   color:chocolate;
+}
+button{
+   background-color : whitesmoke;
+   border-radius: 9px ;
+   font-size:20px;
+   padding: 5px 10px;
+
+}

@@ -1,0 +1,40 @@
+body{
+    background-size:100% 100%;
+    background-repeat:no-repeat;
+background-image: url(../log/agence.png);
+    background-color: chartreuse;
+}    
+table{
+    height: auto;
+    font-size:20px;
+    border:1px solid ;
+    border-collapse:collapse;
+    background-color:gold;
+
+}
+th,td{
+    border:1px solid;
+    
+}a{
+    color : blue;
+    text-decoration:unset;
+ }
+ 
+ a:hover{
+    color:blue;
+ }
+ a:visited{
+    color:chocolate;
+ }
+.next{
+margin: auto;
+
+}
+
+button{
+    background-color : white;
+    border-radius: 20px ;
+    padding: 5px 10px;
+
+ font-size: large;
+ }

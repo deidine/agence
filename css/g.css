@@ -1,0 +1,157 @@
+body{
+    background-size:100% 100%;
+    background-repeat:no-repeat;
+background-image: url(../log/window.jpg);
+    background-color: chartreuse;
+}
+h3{
+   color: orange;
+   font-weight: 10px    ;
+   text-align: center;
+   font-family: 'Courier New', Courier, monospace;
+}
+
+p{
+color: red;
+   font-weight: 1000px    ;
+   text-align: left;
+   font-family:'Times New Roman', Times, serif ;
+   font-size : 50px;
+}
+a{
+    color:whitesmoke;
+    outline:0 ;
+    font-size: 25px;
+    font-family: serif;
+    text-anchor: middle;
+    text-decoration-line: unset;
+}
+
+a:hover{
+   color:white;
+   outline:0 ;
+
+}
+a:visited{
+   color:red;
+   outline:0 ;
+   text-decoration:unset;
+
+}
+a:active{
+outline:0 ;
+
+}
+
+
+
+header {
+height: 60px;
+top: 0.1pt;
+margin:auto;
+background-color: yellow;
+position:fixed;
+width: 100%;
+}
+.h{
+color: brown;
+text-align: center;
+}
+footer{
+display: block;
+background-color: brown;
+font-size:52px;
+text-align: center;
+color: #777;
+}
+img{
+height: 20%;
+margin:10px auto ;
+
+}
+.text{
+width:50%;
+height: 50px;
+}
+.op{
+background-color:orange;
+margin:auto;
+width:50%;
+height: 28%;
+color:white;
+border-radius :20px;
+margin-top:22px;
+}
+.l{
+margin-right:72%;
+font-style:italic;
+color:white;
+background-color:brown;
+border-radius:12px;
+font-size:25px;
+}
+ul{
+margin-right:72%;
+font-style:italic;
+color:brown;
+background-color:whitesmoke;
+border-radius:12px;
+font-size:25px;
+width: 96%;
+}
+.tete{
+position:fixed;
+background-color:green;
+margin-top:-20px;
+width:100%;
+}
+.tete:hover{
+color:orange;
+background-color:turquoise;
+
+}
+.afficher_image{
+    background-image: url(../log/img1.png);
+    background-size: 100% 100%;
+    padding:80px 80px;
+    width: 50%; height:50%;
+}
+.afficher_image:hover{
+    background-image: url(../log/user.jpg);
+    background-size: 100% 100%;
+
+}
+.chercher{
+    width: 50%; height:50%;
+    padding:80px 80px;
+    background-image: url(../log/image5.png);
+    background-size: 100% 100%;
+}
+.chercher:hover{
+    background-image: url(../log/image55.png);
+    background-size: 100% 100%;  
+}
+.left{
+    padding: 40px 80px;
+float:right;
+border-radius: 12px;
+margin-block-start: 20px;
+background-image: url(../log/bus.png);
+background-size: 100% 100%;
+}
+.left_a{
+    color: black;
+    font-weight: bold;
+    font-size:23px;
+    font-family:'Times New Roman', Times, serif;
+}
+.left:hover{
+    background-color: tomato;
+}
+.center{
+    background-color:wheat;
+
+}
+.center:hover{
+    background-color:turquoise;
+}
