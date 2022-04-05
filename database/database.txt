@@ -1,0 +1,84 @@
+CREATE DATABASE `agence`;
+CREATE TABLE `bus_argent` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `commentaire` varchar(475) DEFAULT NULL,
+  `argent` int DEFAULT NULL,
+  `date` datetime DEFAULT NULL,
+  `numero` varchar(8) DEFAULT NULL,
+  `numero_bus` int DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ;
+CREATE TABLE `chauf_depence` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `commentaire` varchar(225) DEFAULT NULL,
+  `numero` int DEFAULT NULL,
+  `montant` int DEFAULT NULL,
+  `temp` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ;
+CREATE TABLE `chauffeur` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `nom` varchar(22) NOT NULL,
+  `prenom` varchar(22) NOT NULL,
+  `numero` int NOT NULL,
+  `telephone` int NOT NULL,
+  `salaire` int DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `numero_UNIQUE` (`numero`)
+);
+CREATE TABLE `client` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `nom` varchar(22) NOT NULL,
+  `prenom` varchar(22) NOT NULL,
+  `numero` int NOT NULL,
+  `telephone` int NOT NULL,
+  `direction` varchar(22) NOT NULL,
+  `temp` varchar(200) DEFAULT NULL,
+  `date` varchar(405) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+);
+CREATE TABLE `clienttarder` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `nom` varchar(22) NOT NULL,
+  `prenom` varchar(22) NOT NULL,
+  `numero` int NOT NULL,
+  `telephone` int NOT NULL,
+  `direction` varchar(22) NOT NULL,
+  `temp` varchar(200) NOT NULL,
+  `depart` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+);
+CREATE TABLE `login` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `username` varchar(22) NOT NULL,
+  `password` varchar(33) NOT NULL,
+  PRIMARY KEY (`id`)
+);
+CREATE TABLE `message` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `nom` varchar(45) DEFAULT NULL,
+  `telephone` int DEFAULT NULL,
+  `envoiyeur` varchar(45) DEFAULT NULL,
+  `message` varchar(45) DEFAULT NULL,
+  `nombremessage` int DEFAULT NULL,
+  `prix` int DEFAULT NULL,
+  `date` varchar(405) DEFAULT NULL,
+  `direction` varchar(200) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+);
+CREATE TABLE `opinion` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `opinion` varchar(22) NOT NULL,
+  `nom` varchar(22) NOT NULL,
+  `email` varchar(22) NOT NULL,
+  PRIMARY KEY (`id`)
+) ;
+CREATE TABLE `voiture` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `numero` varchar(8) NOT NULL,
+  `marque` varchar(22) NOT NULL,
+  `date` datetime NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `numero_UNIQUE` (`numero`),
+  KEY `numero` (`numero`)
+);
